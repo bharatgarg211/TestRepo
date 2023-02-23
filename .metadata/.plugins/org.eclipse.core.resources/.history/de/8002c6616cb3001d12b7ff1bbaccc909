@@ -1,0 +1,17 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.testng.annotations.BeforeMethod;
+
+public class TestCases {
+	
+	public WebDriver driver;
+	
+	@BeforeMethod
+	public void setup() {
+		String hostname = System.getProperty("hostname");
+		String port = System.getProperty("port");
+		String context = System.getProperty("context");
+		driver = new HtmlUnitDriver();
+	}
+
+}
